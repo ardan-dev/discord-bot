@@ -36,7 +36,7 @@ async def on_message(message):
         embed.add_field(name='**Account creation date**', value=str(date.year) + 'Y ' + str(date.month) + 'M ' + str(date.day) + 'D ', inline=True)
         embed.add_field(name='**User ID**', value=message.author.id, inline=True)
         embed.set_thumbnail(url=message.author.avatar_url)
-        embed.set_footer(text='Requested by • ' + message.author.name + '#' + message.author.discriminator, url=message.author.avatar_url)
+        embed.set_footer(text='Requested by • ' + message.author.name + '#' + message.author.discriminator)
 
         await client.send_message(message.channel, embed=embed)
 
